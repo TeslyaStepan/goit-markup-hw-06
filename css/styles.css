@@ -182,9 +182,9 @@ a {
 .address-item {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em; */
   color: #434455;
   /* padding-top: 24px;
   padding-bottom: 24px; */
@@ -206,6 +206,133 @@ a {
 
 .icon-menu-btn-open {
   fill: #2f2f37;
+}
+
+/* mob menu */
+
+.mob-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mob-menu-container {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 40px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.mob-menu-btn-close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu-btn-close:hover,
+.mob-menu-btn-close:focus {
+  border: none;
+  background-color: #404bbf;
+}
+
+.mob-menu-btn-close:hover .cancel-icon {
+  fill: #ffffff;
+}
+
+.mob-menu-btn-close:focus .cancel-icon {
+  fill: #ffffff;
+}
+
+.mob-menu-nav {
+  margin-bottom: auto;
+}
+.mob-menu-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mob-menu-nav:hover,
+.mob-menu-nav:focus {
+  color: #404bbf;
+}
+
+.mob-menu-item {
+  display: block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu-item:hover {
+  color: #404bbf;
+}
+
+.mob-menu-address {
+  /* margin-top: auto; */
+  margin-bottom: 48px;
+  justify-self: flex-end;
+}
+
+.mob-menu-address-list {
+  display: flex;
+  font-style: normal;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mob-menu-address-item {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  display: block;
+}
+
+.mob-menu-address-item:hover,
+.mob-menu-address-item:focus {
+  color: #404bbf;
+}
+
+.mob-menu-soc {
+  max-width: 280px;
+}
+
+.mob-menu-soc .footer-soc-list {
+  gap: 40px;
 }
 
 /* section 1 */
@@ -687,7 +814,7 @@ a {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-ope {
+.backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -706,7 +833,8 @@ a {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
+  /* padding: 72px 24px 24px 24px; */
+  padding: 72px 16px 24px 16px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -860,6 +988,16 @@ a {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  flex-shrink: 0;
+}
+
+.checkbox-modal-mob {
+}
+
+.checkbox-field .label-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .checkbox-field {
@@ -894,6 +1032,10 @@ input[type="checkbox"]:checked + label {
     display: none;
   }
 
+  .mob-menu {
+    display: none;
+  }
+
   .header-nav-list {
     display: flex;
   }
@@ -907,6 +1049,12 @@ input[type="checkbox"]:checked + label {
   .address-list {
     flex-direction: column;
     gap: 12px;
+  }
+
+  .address-item {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
   }
 
   .main-title {
@@ -1020,6 +1168,7 @@ input[type="checkbox"]:checked + label {
   .modal {
     width: 408px;
     min-height: 584px;
+    padding: 72px 24px 24px 24px;
   }
 }
 
@@ -1041,6 +1190,12 @@ input[type="checkbox"]:checked + label {
   .address-list {
     flex-direction: row;
     gap: 40px;
+  }
+
+  .address-item {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
 
   .main-section {

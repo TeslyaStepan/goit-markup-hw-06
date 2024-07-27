@@ -54,7 +54,88 @@
           </svg>
         </button>
       </div>
-      <div class="mob-menu"></div>
+      <div class="mob-menu is-ope">
+        <div class="container mob-menu-container">
+          <button class="mob-menu-btn-close" type="button">
+            <svg class="cancel-icon" height="8" width="8">
+              <use href="./images/icons.svg#icon-cancel"></use>
+            </svg>
+          </button>
+          <nav class="mob-menu-nav">
+            <ul class="mob-menu-nav-list">
+              <li>
+                <a class="mob-menu-item" href="./index.html">Studio</a>
+              </li>
+              <li><a class="mob-menu-item" href="">Portfolio</a></li>
+              <li><a class="mob-menu-item" href="">Contacts</a></li>
+            </ul>
+          </nav>
+          <address class="mob-menu-address">
+            <ul class="mob-menu-address-list">
+              <li>
+                <a
+                  class="mob-menu-address-item"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li>
+                <a class="mob-menu-address-item" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="mob-menu-soc">
+            <ul class="footer-soc-list">
+              <li class="team-memver-soc-item">
+                <a
+                  class="footer-soc-link"
+                  href="https://www.instagram.com"
+                  target="_blank"
+                >
+                  <svg class="team-soc-icon" height="24" width="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-memver-soc-item">
+                <a
+                  class="footer-soc-link"
+                  href="https://www.twitter.com"
+                  target="_blank"
+                >
+                  <svg class="team-soc-icon" height="24" width="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-memver-soc-item">
+                <a
+                  class="footer-soc-link"
+                  href="https://www.facebook.com"
+                  target="_blank"
+                >
+                  <svg class="team-soc-icon" height="24" width="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-memver-soc-item">
+                <a
+                  class="footer-soc-link"
+                  href="https://ua.linkedin.com"
+                  target="_blank"
+                >
+                  <svg class="team-soc-icon" height="24" width="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
       <!--Effective Solutions
@@ -628,7 +709,7 @@ for Your Business-->
 
     <!-- MODAL -->
 
-    <div class="backdrop is-open">
+    <div class="backdrop is-ope">
       <div class="modal">
         <button class="modal-cancel-btn" type="button">
           <svg class="cancel-icon" height="8" width="8">
@@ -693,8 +774,10 @@ for Your Business-->
                   <use href="./images/icons.svg#icon-ok"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a href="" class="privacy-policy">Privacy Policy</a></label
+              <span class="checkbox-modal-mob">
+                I accept the terms and conditions of the
+                <a href="" class="privacy-policy">Privacy Policy</a>
+              </span></label
             >
           </div>
           <button class="order-button" type="submit">Send</button>
